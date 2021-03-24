@@ -15,13 +15,13 @@ heading: Get Started
 This tutorial describes how to install and start using Kendo UI for Angular.
 
 * First, we will go through the installation steps.
-* Next, we'll create a simple app with a few Kendo UI Angular components. The [app source code](https://github.com/telerik/kendo-angular-getting-started) is available for your reference.
+* Next, we'll create a simple app with a few Kendo UI Angular for components. The [app source code](https://github.com/telerik/kendo-angular-getting-started) is available for your reference.
 * Finally, you will learn how to activate your Kendo UI for Angular license.
-* At all steps, we will recommend relevant learning resources that will help you be successful with Kendo UI for Angular.
+* On every step, we will recommend relevant learning resources that will help you be successful with Kendo UI for Angular.
 
 <blockquote class="alert-note">
     <h3 style="margin-top: 0;">Do You Prefer Video?</h3>
-    <p>You can setup an Angular project and add Kendo UI Angular components by following the steps below. Alternatively, you can check our <a href="https://www.telerik.com/campaigns/kendo-ui/using-kendo-ui-with-angular-video-tutorial">Angular video tutorials</a> or our <a href="https://www.telerik.com/kendo-angular-ui/components/virtual-class/">full-blown Kendo UI Angular video course</a>.</p>
+    <p>You can setup an Angular project and add Kendo UI for Angular components by following the steps in this guide. Alternatively, you can check our <a href="https://www.telerik.com/campaigns/kendo-ui/using-kendo-ui-with-angular-video-tutorial">Angular video tutorials</a> or our <a href="https://www.telerik.com/kendo-angular-ui/components/virtual-class/">full-blown Kendo UI Angular video course</a>.</p>
 </blockquote>
 
 ## Set up the Angular Project
@@ -35,19 +35,24 @@ After checking the [system requrements]({% slug requirements_installation %}), t
 ```sh
 npm install -g @angular/cli
 ng new kendo-angular-app
-cd kendo-angular-app
 ```
 
-The `ng new` command will prompt for a few settings of the new Angular app. Let's use these:
+The `ng new` command will prompt you for a few settings of the new Angular app. Let's use these:
 
 * *Enforce stricter type checking and bundle budgets?* - **No**
 * *Add Angular routing?* - **Yes**
 * *Stylesheet format?* - **CSS**
 
-When the new app is generated, replace the content of `src/app/app.component.html` with: 
+When the new app is generated, change the current directory to `kendo-angular-app`:
+
+```sh
+cd kendo-angular-app
+```
+
+Now replace the content of `src/app/app.component.html` with: 
 
 ```html
-<h1>Hello Kendo UI Angular!</h1>
+<h1>Hello Kendo UI for Angular!</h1>
 ```
 
 Then, build and open the Angular app in the browser:
@@ -56,11 +61,11 @@ Then, build and open the Angular app in the browser:
 ng serve -o
 ```
 
-We are ready to dive into Kendo UI Angular!
+We are ready to dive into Kendo UI for Angular! Next, we will [add some data](#add-data) to our app, and then we will bind this data to the [Kendo DropDownList](#add-a-dropdownlist) and the [Kendo Grid](#add-a-grid) components.
 
 ## Add Data
 
-Let's prepare to use professional data-driven UI components. For simplicity, we will add static local JSON data to our project, and a service that you can later modify to use remote data. Create the following three files and copy-paste their content from the linked files in GitHub: 
+Let's prepare to use professional data-driven UI components by adding some sample data to our app. For simplicity, we will add static local JSON data to our project and a service that you can later modify to use remote data. Create the following three files and copy-paste their content from the linked files in GitHub: 
 
 * [src/app/data.products.ts](https://github.com/telerik/kendo-angular-getting-started/blob/master/src/app/data.products.ts)
 * [src/app/data.categories.ts](https://github.com/telerik/kendo-angular-getting-started/blob/master/src/app/data.categories.ts)
@@ -76,15 +81,15 @@ Let's add a [Kendo UI Angular DropDownList]({% slug overview_ddl %}) to our app 
 ng add @progress/kendo-angular-dropdowns
 ```
 
-2. The `ng add` command will also automatically install the [Default Kendo UI theme]({% slug themesandstyles %}).
+  The `ng add` command will also automatically install the [Default Kendo UI theme]({% slug themesandstyles %}).
 
-3. Open `src/app/app.component.ts` and import `categories` from `data.categories`:
+2. Open `src/app/app.component.ts` and import `categories` from `data.categories`:
 
 ```ts
 import { categories } from "./data.categories";
 ```
 
-4. In the same file, declare the variables that we will use inside the component declaration:
+3. In the same file, declare the variables that we will use inside the component declaration:
 
 ```ts
 export class AppComponent {
@@ -199,7 +204,7 @@ The Grid instance in our app can be [sorted]({% slug sorting_grid %}) and [paged
 
 ## Filter the Grid with the DropDownList
 
-Finally, let's add some component interaction. The Grid has [built-in filtering UI]({% slug filtering_grid %}), but instead, we will use the DropDownList to filter the Grid by product category. To achieve this, we need to add a [`valueChange` handler]({% slug overview_ddl %}#toc-events):
+Finally, let's add some component interaction. The Grid has a [built-in filtering UI]({% slug filtering_grid %}), but instead, we will use the DropDownList to filter the Grid by product category. To achieve this, we need to add a [`valueChange` handler]({% slug overview_ddl %}#toc-events):
 
 1. Add the `handleFilterChange` method in `src/app/app.component.ts`:
 
@@ -232,7 +237,7 @@ Your Kendo UI Angular Getting Started application is complete!
 
 ![Kendo UI Angular Getting Started app](./images/getting-started.png)
 
-The complete source code is available at the [kendo-angular-getting-started GitHub repository](https://github.com/telerik/kendo-angular-getting-started).
+The complete source code is available in the [kendo-angular-getting-started GitHub repository](https://github.com/telerik/kendo-angular-getting-started).
 
 You can also [run, fork and experiment with the app directly in StackBlitz](https://stackblitz.com/github/telerik/kendo-angular-getting-started).
 
@@ -240,7 +245,7 @@ You can also [run, fork and experiment with the app directly in StackBlitz](http
 
 Kendo UI for Angular is a professionally developed library distributed under a [commercial license](https://www.telerik.com/purchase/license-agreement/kendo-ui).
 
-Starting from December 2020, [Kendo UI for Angular requires a commercial license key, or an active trial license key](https://www.telerik.com/blogs/introducing-license-keys-kendo-ui-for-angular).
+Starting from December 2020, [Kendo UI for Angular requires a commercial license key or an active trial license key](https://www.telerik.com/blogs/introducing-license-keys-kendo-ui-for-angular).
 
 Follow the instructions at [Set Up Your License Key]({% slug my_license_angular %}) to activate your license.
 
@@ -248,7 +253,7 @@ Follow the instructions at [Set Up Your License Key]({% slug my_license_angular 
 
 ## Next Steps
 
-You are ready to explore the Components section and discover the amazing features of Kendo UI for Angular!
+You are ready to explore the [Components section](https://www.telerik.com/kendo-angular-ui/components) and discover the amazing features of Kendo UI for Angular!
 
 You may also want to check:
 
